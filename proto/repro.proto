@@ -1,0 +1,9 @@
+syntax = "proto3";
+package repro;
+
+message Aaa {
+    // The name "b" doesn't work because it conflicts with type parameters?
+    oneof bbb {
+        int64 ccc = 1;
+    }
+}
